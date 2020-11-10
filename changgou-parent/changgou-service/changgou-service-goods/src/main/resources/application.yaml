@@ -1,0 +1,21 @@
+server:
+  port: 18081   #修改端口
+spring:
+  application:
+    name: goods #在eureka的名称
+  #配置数据库的数据源
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/changgou_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka #eureka注册中心地址
+  instance:
+    prefer-ip-address: true #使用ip地址进行注册
+#feign和hystrinx的支持
+feign:
+  hystrix:
+    enabled: true
