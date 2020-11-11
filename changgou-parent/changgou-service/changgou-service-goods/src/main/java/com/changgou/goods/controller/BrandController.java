@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 /***
  * @ClassName BrandController
- * @Description 描述
+ * @Description 品牌控制层
  * @version 1.0.0
  * @author ayuan
  * @createTime 2020/11/09 21:36:00
