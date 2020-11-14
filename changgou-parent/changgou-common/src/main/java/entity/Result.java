@@ -36,8 +36,8 @@ public class Result<T> implements Serializable {
     }
 
     //返回的操作成功结果集对象
-    public static <T> Result<T> ok(T t) {
-        return new Result(true,StatusCode.OK,"操作成功",t);
+    public static <T> Result<T> ok(String message, T t) {
+        return new Result(true,StatusCode.OK,message,t);
     }
 
     public boolean isFlag() {

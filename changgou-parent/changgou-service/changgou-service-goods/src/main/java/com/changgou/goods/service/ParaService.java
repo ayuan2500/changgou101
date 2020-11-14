@@ -3,12 +3,14 @@ package com.changgou.goods.service;
 import com.changgou.core.service.CoreService;
 import com.changgou.goods.pojo.Para;
 
-/***
- * @ClassName ParaService
- * @Description 参数业务层接口
- * @version 1.0.0
- * @author ayuan
- * @createTime 2020/11/11 16:45:00
- */
+import java.util.List;
+
+/****
+ * @Author:admin
+ * @Description:Para业务层接口
+ * @Date 2019/6/14 0:16
+ *****/
 public interface ParaService extends CoreService<Para> {
+    //根据分类id查询参数对象集合
+    List<Para> findByCategoryId(Integer categoryId);
 }

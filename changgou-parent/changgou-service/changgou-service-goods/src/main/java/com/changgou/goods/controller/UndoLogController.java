@@ -1,8 +1,8 @@
 package com.changgou.goods.controller;
 
 import com.changgou.core.controller.AbstractCoreController;
-import com.changgou.goods.pojo.Album;
-import com.changgou.goods.service.AlbumService;
+import com.changgou.goods.pojo.UndoLog;
+import com.changgou.goods.service.UndoLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
  *****/
 
 @RestController
-@RequestMapping("/album")
+@RequestMapping("/undoLog")
 @CrossOrigin
-public class AlbumController extends AbstractCoreController<Album>{
+public class UndoLogController extends AbstractCoreController<UndoLog>{
 
-    private AlbumService  albumService;
+    private UndoLogService  undoLogService;
 
     @Autowired
-    public AlbumController(AlbumService  albumService) {
-        super(albumService, Album.class);
-        this.albumService = albumService;
+    public UndoLogController(UndoLogService  undoLogService) {
+        super(undoLogService, UndoLog.class);
+        this.undoLogService = undoLogService;
         }
 }

@@ -3,12 +3,14 @@ package com.changgou.goods.service;
 import com.changgou.core.service.CoreService;
 import com.changgou.goods.pojo.Spec;
 
-/***
- * @ClassName SpecService
- * @Description 规格业务层接口
- * @version 1.0.0
- * @author ayuan
- * @createTime 2020/11/11 16:33:00
- */
+import java.util.List;
+
+/****
+ * @Author:admin
+ * @Description:Spec业务层接口
+ * @Date 2019/6/14 0:16
+ *****/
 public interface SpecService extends CoreService<Spec> {
+    //根据分类id查询规格对象集合
+    List<Spec> findByCategoryId(Integer categoryId);
 }

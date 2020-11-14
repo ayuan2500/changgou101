@@ -1,8 +1,8 @@
 package com.changgou.goods.controller;
 
 import com.changgou.core.controller.AbstractCoreController;
-import com.changgou.goods.pojo.Album;
-import com.changgou.goods.service.AlbumService;
+import com.changgou.goods.pojo.CategoryBrand;
+import com.changgou.goods.service.CategoryBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
  *****/
 
 @RestController
-@RequestMapping("/album")
+@RequestMapping("/categoryBrand")
 @CrossOrigin
-public class AlbumController extends AbstractCoreController<Album>{
+public class CategoryBrandController extends AbstractCoreController<CategoryBrand>{
 
-    private AlbumService  albumService;
+    private CategoryBrandService  categoryBrandService;
 
     @Autowired
-    public AlbumController(AlbumService  albumService) {
-        super(albumService, Album.class);
-        this.albumService = albumService;
+    public CategoryBrandController(CategoryBrandService  categoryBrandService) {
+        super(categoryBrandService, CategoryBrand.class);
+        this.categoryBrandService = categoryBrandService;
         }
 }

@@ -3,13 +3,14 @@ package com.changgou.goods.service;
 import com.changgou.core.service.CoreService;
 import com.changgou.goods.pojo.Category;
 
+import java.util.List;
 
-/***
- * @ClassName CategoryService
- * @Description 商品分类业务层接口
- * @version 1.0.0
- * @author ayuan
- * @createTime 2020/11/11 17:28:00
- */
+/****
+ * @Author:admin
+ * @Description:Category业务层接口
+ * @Date 2019/6/14 0:16
+ *****/
 public interface CategoryService extends CoreService<Category> {
+    //根据父Id查询分类对象（可实现查询一级、二级、三级菜单）
+    List<Category> findByParentId(Integer parentId);
 }
